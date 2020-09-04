@@ -33,3 +33,7 @@
 ### 常用ORM框架：
 #### （1）Hibernate : 全自動,需要寫hql語句
 #### （2）iBATIS : 半自動,自己寫sql語句,可操作性強,小巧
+***
+## 三、Hibernate 架構
+### <img src="images/hibernate_high_level.jpg">
+### <img src="images/hibernate_architecture.jpg">
