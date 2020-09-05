@@ -36,8 +36,8 @@
 ***
 ## 三、Hibernate 架構
 ### Hibernate架構是分層的，隔離的不必知道底層API。 Hibernate中使用數據庫和配置信息來為應用程序提供持久化服務（以及持久的類）。
-### <img src="../images/hibernate_high_level.jpg">
-### <img src="../images/hibernate_architecture.jpg">
+### <img src="images/hibernate_high_level.jpg">
+### <img src="images/hibernate_architecture.jpg">
 ### Hibernate使用各種現有的Java API，如JDBC，Java事務API（JTA）和Java命名和目錄接口（JNDI）。
 ### JDBC提供了常見的關係數據庫功能的抽象的一個基本功能，使其具有JDBC驅動程序，Hibernate支持幾乎任何數據庫。
 ### Hibernate的核心元件簡介：
