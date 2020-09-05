@@ -107,4 +107,4 @@
 	  </build>
 	</project>
 ### 這樣 Maven 套件會自動將對應之工具庫載入 CLASSPATH , 如下圖:
-### <img src="../images/maven.jpg"> 
+### <img src="images/maven.jpg"> 
