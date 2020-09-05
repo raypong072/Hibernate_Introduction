@@ -13,7 +13,8 @@
 #### 2) 類映射設置：此類創建Java類和數據庫表之間的連接。
 ### 2. SessionFactory介面:
 #### SessionFactroy介面負責初始化Hibernate。它充當資料儲存源的代理,並負責建立Session物件。這裡用到了工廠模式。
-#### 需要注意的SessionFactory並不是輕量級的,因為一般情況下,一個專案通常只需要一個SessionFactory就可以了,當需要操作多個數據庫時,可以為每個資料庫指定一個SessionFactory。
+#### 一個SessionFactory對應一個數據源，它是個重量級物件，不可隨意生成多個例項。對於一般的單資料庫應用來說，只需要一個SessionFactory就足夠了。
+#### 當然如果有多個數據庫的話，還是需要為每個資料庫生成對應的SessionFactory。它是執行緒安全的，同一個例項可以被應用中的多個執行緒共享。
 ### 3. Session介面:
 #### Session介面負責執行被持久化物件的操作,它有get( ),load( ),save( ),update( )和delete( )等方法用來對 PO 進行載入、儲存、更新及刪除等操作。
 #### 但需要注意的是Session物件是非執行緒安全的。同時,Hibernate的session不同於JSP應用中的HttpSession。這裡當使用session這個術語時,其實指的是Hibernate中的session。
