@@ -355,9 +355,12 @@
 
 #### 一個設定的方式如下所示：
 	<property name="name" column="name" type="string"/>
-	tag:generator 設定主鍵的生成方式，可以設定"native"表示由Hibernate自動根據Dialect選擇 採用 identity、hilo、sequence等作為主鍵生成方式，
-	也可以考慮採用uuid由Hibernate根據128位元UUID演算法（128- bit UUID algorithm）生成16進位制數值，並編碼為32位長度的字串。
-#### 我們可以在tag:hibernate-mapping上設定package屬性，如此一來，文件中要設置類別名稱時，就不用寫出完整的package，例如：
+	tag:generator 設定主鍵的生成方式，可以設定"native" 
+	表示由Hibernate自動根據Dialect選擇 採用 identity、hilo、sequence等作為主鍵生成方式，
+	也可以考慮採用uuid由Hibernate根據128位元UUID演算法（128- bit UUID algorithm）生成16進位制數值，
+	並編碼為32位長度的字串。
+#### 我們可以在tag:hibernate-mapping上設定package屬性，
+#### 如此一來，文件中要設置類別名稱時，就不用寫出完整的package，例如：
 	<hibernate-mapping package="demo.model">
 		<!--類別名稱與表格名稱映射-->
 		<class name="User" table="user">
