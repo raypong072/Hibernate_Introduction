@@ -348,10 +348,10 @@
 	}
 #### Table : User
 <img src="images/Table_User.jpg">
-	在<id>或<property>的設定上，name設定類別上的屬性名，而column對應至表格欄位，如果屬性名稱與欄位名稱相同，則可以省略column屬性設定。
+	在 tag:id或 tag:property 的設定上，name設定類別上的屬性名，而column對應至表格欄位，如果屬性名稱與欄位名稱相同，則可以省略column屬性設定。
 	<id>或<property>上，可以設定type屬性，在type上可以設定Java類別的資料 型態，但由於 Java的資料型態與資料庫的資料型態並不是一對一對應的，
 	為此Hibernate提供它自己的資料型態，作為Java資料型態與資料庫資料型態的連接型 態，下面的表格列出型態之間的對應：
-<img src="images/Table_Mapping.jpg">
+<img src="images/Type_Mapping.jpg">
 
 #### 一個設定的方式如下所示：
 	<property name="name" column="name" type="string"/>
