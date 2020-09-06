@@ -348,13 +348,14 @@
 	}
 #### Table : User
 <img src="images/Table_User.jpg">
-### 在<id>或<property>的設定上，name設定類別上的屬性名，而column對應至表格欄位，如果屬性名稱與欄位名稱相同，則可以省略column屬性設定。
-### <id>或<property>上，可以設定type屬性，在type上可以設定Java類別的資料 型態，但由於 Java的資料型態與資料庫的資料型態並不是一對一對應的，為此Hibernate提供它自己的資料型態，作為Java資料型態與資料庫資料型態的連接型 態，下面的表格列出型態之間的對應：
+	在<id>或<property>的設定上，name設定類別上的屬性名，而column對應至表格欄位，如果屬性名稱與欄位名稱相同，則可以省略column屬性設定。
+	<id>或<property>上，可以設定type屬性，在type上可以設定Java類別的資料 型態，但由於 Java的資料型態與資料庫的資料型態並不是一對一對應的，
+	為此Hibernate提供它自己的資料型態，作為Java資料型態與資料庫資料型態的連接型 態，下面的表格列出型態之間的對應：
 <img src="images/Table_Mapping.jpg">
 ### 一個設定的方式如下所示：
 	<property name="name" column="name" type="string"/>
-### <generator>設定主鍵的生成方式，可以設定"native"表示由Hibernate自動根據Dialect選擇 採用 identity、hilo、sequence等作為主鍵生成方式，也可以考慮採用uuid由Hibernate根據128位元UUID演算法（128- bit UUID algorithm）生成16進位制數值，並編碼為32位長度的字串。
-### 我們可以在<hibernate-mapping>上設定package屬性，如此一來，文件中要設置類別名稱時，就不用寫出完整的package，例如：
+### tag:generator 設定主鍵的生成方式，可以設定"native"表示由Hibernate自動根據Dialect選擇 採用 identity、hilo、sequence等作為主鍵生成方式，也可以考慮採用uuid由Hibernate根據128位元UUID演算法（128- bit UUID algorithm）生成16進位制數值，並編碼為32位長度的字串。
+### 我們可以在tag:hibernate-mapping上設定package屬性，如此一來，文件中要設置類別名稱時，就不用寫出完整的package，例如：
 	<hibernate-mapping package="demo.model">
 		<!--類別名稱與表格名稱映射-->
 		<class name="User" table="user">
@@ -366,7 +367,7 @@
 	Query query = session.createQuery("from User"); 
 
 ### 這是Hibernate的auto-import功能，然而如果在不同的package下都有User類別，則Hibernate將無從得知是要使用哪個User類別，
-### 可以在<hibernate-mapping>上設定auto-import屬性為false，關閉auto-import功能，並在HQL中撰寫完整的類別名稱。
+### 可以在tag:hibernate-mapping上設定auto-import屬性為false，關閉auto-import功能，並在HQL中撰寫完整的類別名稱。
 
 ### 另一種解決的方式，是在<hibernate-mapping>中使用<import>設定別名，例如：
 	<hibernate-mapping>
