@@ -627,25 +627,25 @@
 ### 1. 集合映射（Collection mappings）
 #### 如果一個實例或者類中有特定變量的值的集合，那麽我們可以應用 Java 中的任何的可用的接口來映射這些值
 ### <img src="../images/OR-Collection.jpg">
-[java.util.Set](https://www.tutorialspoint.com/hibernate/hibernate_set_mapping.htm)
-[java.util.SortedSet](https://www.tutorialspoint.com/hibernate/hibernate_sortedset_mapping.htm)
-[java.util.List](https://www.tutorialspoint.com/hibernate/hibernate_list_mapping.htm)
-[java.util.Collection](https://www.tutorialspoint.com/hibernate/hibernate_bag_mapping.htm)
-[java.util.Map](https://www.tutorialspoint.com/hibernate/hibernate_map_mapping.htm)
-[java.util.SortedMap](https://www.tutorialspoint.com/hibernate/hibernate_sortedmap_mapping.htm)
+#### [java.util.Set](https://www.tutorialspoint.com/hibernate/hibernate_set_mapping.htm)
+#### [java.util.SortedSet](https://www.tutorialspoint.com/hibernate/hibernate_sortedset_mapping.htm)
+#### [java.util.List](https://www.tutorialspoint.com/hibernate/hibernate_list_mapping.htm)
+#### [java.util.Collection](https://www.tutorialspoint.com/hibernate/hibernate_bag_mapping.htm)
+#### [java.util.Map](https://www.tutorialspoint.com/hibernate/hibernate_map_mapping.htm)
+#### [java.util.SortedMap](https://www.tutorialspoint.com/hibernate/hibernate_sortedmap_mapping.htm)
 
 ### 2. 關聯映射
 #### 實體類之間的關聯映射以及表之間的關系是 ORM 的靈魂之處。對象間的關系的子集可以用下列四種方式解釋。關聯映射可以是單向的也可以是雙向的。
 ### <img src="images/OR-Relation.jpg">
-[Many-to-One](https://www.tutorialspoint.com/hibernate/hibernate_many_to_one_mapping.htm "參考範例")
-[One-to-One](https://www.tutorialspoint.com/hibernate/hibernate_one_to_one_mapping.htm "參考範例")
-[One-to-Many](https://www.tutorialspoint.com/hibernate/hibernate_one_to_many_mapping.htm "參考範例")
-[Many-to-Many](https://www.tutorialspoint.com/hibernate/hibernate_many_to_many_mapping.htm "參考範例")
+#### [Many-to-One](https://www.tutorialspoint.com/hibernate/hibernate_many_to_one_mapping.htm "參考範例")
+#### [One-to-One](https://www.tutorialspoint.com/hibernate/hibernate_one_to_one_mapping.htm "參考範例")
+#### [One-to-Many](https://www.tutorialspoint.com/hibernate/hibernate_one_to_many_mapping.htm "參考範例")
+#### [Many-to-Many](https://www.tutorialspoint.com/hibernate/hibernate_many_to_many_mapping.htm "參考範例")
 
 ### 3. 組件映射
 #### 作為變量的一員實體類很可能和其它類具有相關關系。如果引用的類沒有自己的生命周期並且完全依靠於擁有它的那個實體類的生命周期的話，那麽這個引用類因此就可以叫做組件類。
 ### <img src="images/OR-Component.jpg">
-[Component Mappings](https://www.tutorialspoint.com/hibernate/hibernate_component_mappings.htm "參考範例")
+#### [Component Mappings](https://www.tutorialspoint.com/hibernate/hibernate_component_mappings.htm "參考範例")
 
 ### 範例:
 #### table schema
