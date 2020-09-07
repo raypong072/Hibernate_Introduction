@@ -103,3 +103,140 @@
 
 	// To get sum of a property.
 	cr.setProjection(Projections.sum("salary"));
+	
+### 範例練習:
+#### POJO:
+	public class Employee {
+	   private int id;
+	   private String firstName; 
+	   private String lastName;   
+	   private int salary;  
+
+	   public Employee() {}
+	   public Employee(String fname, String lname, int salary) {
+		  this.firstName = fname;
+		  this.lastName = lname;
+		  this.salary = salary;
+	   }
+	   public int getId() {
+		  return id;
+	   }
+	   public void setId( int id ) {
+		  this.id = id;
+	   }
+	   public String getFirstName() {
+		  return firstName;
+	   }
+	   public void setFirstName( String first_name ) {
+		  this.firstName = first_name;
+	   }
+	   public String getLastName() {
+		  return lastName;
+	   }
+	   public void setLastName( String last_name ) {
+		  this.lastName = last_name;
+	   }
+	   public int getSalary() {
+		  return salary;
+	   }
+	   public void setSalary( int salary ) {
+		  this.salary = salary;
+	   }
+	}
+#### table schems
+	create table EMPLOYEE (
+	   id INT NOT NULL auto_increment,
+	   first_name VARCHAR(20) default NULL,
+	   last_name  VARCHAR(20) default NULL,
+	   salary     INT  default NULL,
+	   PRIMARY KEY (id)
+	);
+#### Employee.hbm.xml
+	<?xml version="1.0" encoding="utf-8"?>
+	<!DOCTYPE hibernate-mapping PUBLIC 
+	 "-//Hibernate/Hibernate Mapping DTD//EN"
+	 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+	<hibernate-mapping>
+	   <class name="Employee" table="EMPLOYEE">
+		  <meta attribute="class-description">
+			 This class contains the employee detail. 
+		  </meta>
+		  <id name="id" type="int" column="id">
+			 <generator class="native"/>
+		  </id>
+		  <property name="firstName" column="first_name" type="string"/>
+		  <property name="lastName" column="last_name" type="string"/>
+		  <property name="salary" column="salary" type="int"/>
+	   </class>
+	</hibernate-mapping>
+
+#### 查詢方法:
+	/* Method to  READ all the employees having salary more than 2000 */
+	public void listEmployees( ){
+	  Session session = factory.openSession();
+	  Transaction tx = null;
+	  try{
+		 tx = session.beginTransaction();
+		 Criteria cr = session.createCriteria(Employee.class);
+		 // Add restriction.
+		 cr.add(Restrictions.gt("salary", 2000));
+		 List employees = cr.list();
+
+		 for (Iterator iterator = 
+						   employees.iterator(); iterator.hasNext();){
+			Employee employee = (Employee) iterator.next(); 
+			System.out.print("First Name: " + employee.getFirstName()); 
+			System.out.print("  Last Name: " + employee.getLastName()); 
+			System.out.println("  Salary: " + employee.getSalary()); 
+		 }
+		 tx.commit();
+	  }catch (HibernateException e) {
+		 if (tx!=null) tx.rollback();
+		 e.printStackTrace(); 
+	  }finally {
+		 session.close(); 
+	  }
+	}
+	/* Method to print total number of records */
+	public void countEmployee(){
+	  Session session = factory.openSession();
+	  Transaction tx = null;
+	  try{
+		 tx = session.beginTransaction();
+		 Criteria cr = session.createCriteria(Employee.class);
+
+		 // To get total row count.
+		 cr.setProjection(Projections.rowCount());
+		 List rowCount = cr.list();
+
+		 System.out.println("Total Coint: " + rowCount.get(0) );
+		 tx.commit();
+	  }catch (HibernateException e) {
+		 if (tx!=null) tx.rollback();
+		 e.printStackTrace(); 
+	  }finally {
+		 session.close(); 
+	  }
+	}
+	/* Method to print sum of salaries */
+	public void totalSalary(){
+	  Session session = factory.openSession();
+	  Transaction tx = null;
+	  try{
+		 tx = session.beginTransaction();
+		 Criteria cr = session.createCriteria(Employee.class);
+
+		 // To get total salary.
+		 cr.setProjection(Projections.sum("salary"));
+		 List totalSalary = cr.list();
+
+		 System.out.println("Total Salary: " + totalSalary.get(0) );
+		 tx.commit();
+	  }catch (HibernateException e) {
+		 if (tx!=null) tx.rollback();
+		 e.printStackTrace(); 
+	  }finally {
+		 session.close(); 
+	  }
+	}
