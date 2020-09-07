@@ -746,7 +746,7 @@
 
 ### 聚合方法
 #### HQL支持多種聚合方法，類似於SQL。他們工作在HQL同樣的方式在SQL和下麵的可用功能列表：
-<img src="../images/HQL_Group.jpg">
+<img src="images/HQL_Group.jpg">
 
 #### DISTINCT關鍵字隻計算在該行設定的唯一值。下麵的查詢將隻返回唯一的計數：
 
@@ -756,7 +756,7 @@
 
 ### 使用查詢分頁
 #### 有用於分頁查詢接口的兩個方法。
-<img src="../images/HQL_Page.jpg">
+<img src="images/HQL_Page.jpg">
 
 #### This method tells Hibernate to retrieve a fixed number maxResults of objects.
 #### 采用上述兩種方法一起，可以在網站或Swing應用程序構建一個分頁組件。下麵是例子，可以擴展來獲取10行：
