@@ -2,12 +2,12 @@
 ### 1. 集合映射（Collection mappings）
 #### 如果一個實例或者類中有特定變量的值的集合，那麽我們可以應用 Java 中的任何的可用的接口來映射這些值
 ### <img src="../images/OR-Collection.jpg">
-#### [java.util.Set](https://www.tutorialspoint.com/hibernate/hibernate_set_mapping.htm)
-#### [java.util.SortedSet](https://www.tutorialspoint.com/hibernate/hibernate_sortedset_mapping.htm)
-#### [java.util.List](https://www.tutorialspoint.com/hibernate/hibernate_list_mapping.htm)
-#### [java.util.Collection](https://www.tutorialspoint.com/hibernate/hibernate_bag_mapping.htm)
+#### [java.util.Set](https://www.tutorialspoint.com/hibernate/hibernate_set_mapping.htm "參考範例")
+#### [java.util.SortedSet](https://www.tutorialspoint.com/hibernate/hibernate_sortedset_mapping.htm "參考範例")
+#### [java.util.List](https://www.tutorialspoint.com/hibernate/hibernate_list_mapping.htm "參考範例")
+#### [java.util.Collection](https://www.tutorialspoint.com/hibernate/hibernate_bag_mapping.htm "參考範例")
 #### [java.util.Map](https://www.tutorialspoint.com/hibernate/hibernate_map_mapping.htm)
-#### [java.util.SortedMap](https://www.tutorialspoint.com/hibernate/hibernate_sortedmap_mapping.htm)
+#### [java.util.SortedMap](https://www.tutorialspoint.com/hibernate/hibernate_sortedmap_mapping.htm "參考範例")
 
 ### 2. 關聯映射
 #### 實體類之間的關聯映射以及表之間的關系是 ORM 的靈魂之處。對象間的關系的子集可以用下列四種方式解釋。關聯映射可以是單向的也可以是雙向的。
