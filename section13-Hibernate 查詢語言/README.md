@@ -1,4 +1,4 @@
-## 十一、Hibenate 查詢語言
+## 十三、Hibenate 查詢語言
 #### Hibernate查詢語言（HQL）是一種麵向對象的查詢語言，類似於SQL，但不是對表和列操作，HQL適用於持久對象和它們的屬性。 HQL查詢由Hibernate轉換成傳統的SQL查詢，在數據庫執行操作。
 
 #### 雖然可以直接使用SQL語句和Hibernate使用原生SQL，但建議使用HQL儘可能避免數據庫可移植性的麻煩，並采取Hibernate的SQL生成和緩存策略的優勢。

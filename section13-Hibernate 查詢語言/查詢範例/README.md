@@ -1,4 +1,4 @@
-## 十一、Hibenate 查詢語言
+## 十三、Hibenate 查詢語言範例
 ### Hibernate語言查詢(Hibernate Query Language,HQL)
 #### 它是完全物件導向的查詢語句，查詢功能非常強大；具備多型、關聯等特性，HQL查詢也是Hibernate官方推薦使用的查詢方法。
 ### 下面我們通過一個案例分析相關查詢方法
@@ -128,4 +128,4 @@
 #### 13.分頁查詢
 #### 14.導航查詢
 
-
+[參考網站](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/298369/#outline__2)

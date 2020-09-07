@@ -1,4 +1,4 @@
-## 十一、Hibenate Hibernate 註解
+## 十二、Hibenate Hibernate 註解
 ### 1. @Entity 註解將一個類宣告為實體Bean
 ### 2. @Id 和 @GeneratedValue 註解：
 #### 每個實體bean將有一個主鍵，注釋在類的@Id注解。主鍵可以是單個字段或根據表結構的多個字段的組合。
