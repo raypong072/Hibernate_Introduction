@@ -1,5 +1,5 @@
 ## 十一、Hibenate O/R 映射
-### 1. 集合映射
+### 1. 集合映射（Collection mappings）
 #### 如果一個實例或者類中有特定變量的值的集合，那麽我們可以應用 Java 中的任何的可用的接口來映射這些值
 ### <img src="../images/OR-Collection.jpg">
 

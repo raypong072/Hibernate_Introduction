@@ -624,7 +624,7 @@
 	5. 執行ManageEmployee二進制文件來運行程序。
 ***
 ## 十一、Hibenate O/R 映射
-### 1. 集合映射
+### 1. 集合映射（Collection mappings）
 #### 如果一個實例或者類中有特定變量的值的集合，那麽我們可以應用 Java 中的任何的可用的接口來映射這些值
 ### <img src="images/OR-Collection.jpg">
 
@@ -635,3 +635,23 @@
 ### 3. 組件映射
 #### 作為變量的一員實體類很可能和其它類具有相關關系。如果引用的類沒有自己的生命周期並且完全依靠於擁有它的那個實體類的生命周期的話，那麽這個引用類因此就可以叫做組件類。
 ### <img src="images/OR-Component.jpg">
+
+***
+## 十一、Hibenate Hibernate 註解
+### 1. @Entity 註解將一個類宣告為實體Bean
+### 2. @Id 和 @GeneratedValue 註解：
+#### 每個實體bean將有一個主鍵，注釋在類的@Id注解。主鍵可以是單個字段或根據表結構的多個字段的組合。
+### 3. @Table 註解:
+#### @Table註解包含一個schema和一個catelog屬性,使用@UniqueConstraints 可以定義表的唯一約束。
+	@Table(name="tbl_sky",uniqueConstraints ={@UniqueConstraint(columnNames={"month", "day"})} )
+#### 上述程式碼在 "month" 和 "day" 兩個 field 上加上unique constrainst.
+### 4. @Column 註解:
+#### @Column 用於指定的列到一個字段或屬性將被映射的細節。可以使用列注釋以下最常用的屬性：
+
+	name屬性：允許將顯式指定列的名稱。
+
+	length 屬性：允許用於映射一個value尤其是對一個字符串值的列的大小。
+
+	nullable 屬性：允許該列被標記為NOT NULL生成架構時。
+
+	unique 屬性：允許被標記為隻包含唯一值的列。
