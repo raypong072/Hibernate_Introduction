@@ -55,7 +55,7 @@
 ### Restrictions的幾個常用限定查詢方法如下表所示：
 <img src="../images/Criteria_Restrictions.jpg">
 
-#### ### 使用查詢分頁
+#### 使用查詢分頁
 #### 有用於分頁查詢接口的兩個方法。
 <img src="../images/HQL_Page.jpg">
 
