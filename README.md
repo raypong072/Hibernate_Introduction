@@ -1552,6 +1552,7 @@
 #### 這些方法是從session到應用程序的回調(call back)，從而允許應用程序在保存，更新，刪除或加載持久對象之前檢查(和/或)操縱該物件的屬性。
 #### 以下是攔截器界面中所有可用方法的列表：
 <img src="images/hibernate_interceptor_methods.jpg">
+
 #### findDirty():在Session對像上調用flush（）方法時將調用此方法。
 #### instantiate():當實例化持久化類時，將調用此方法。
 #### isUnsaved():將物件傳遞給saveOrUpdate（）方法時，將調用此方法
