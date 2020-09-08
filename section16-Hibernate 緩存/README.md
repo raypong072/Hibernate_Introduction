@@ -1,7 +1,7 @@
 ## 十六、Hibernate 緩存
 #### 緩存是位於應用程序和數據庫之間所有關於應用程序的性能優化，以避免數據庫訪問多次，讓性能關鍵型應用程序有更好的表現。
 #### 緩存對Hibernate很重要，它采用了多級緩存方案下文所述：
-<img src="images/Hibernate_Cache.jpg">
+<img src="../images/Hibernate_Cache.jpg">
 
 ### 第一級緩存：
 #### 是Session級別的緩存，一個Session做了一個查詢操作，它會把這個操作的結果放在一級緩存中，
